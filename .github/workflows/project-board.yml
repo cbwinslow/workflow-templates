@@ -1,0 +1,17 @@
+name: 'Project Board Automation'
+
+on:
+  issues:
+    types: [opened, reopened, closed]
+  pull_request:
+    types: [opened, reopened, closed]
+
+jobs:
+  project-board:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: alex-page/github-project-automation-plus@v0.8.3
+        with:
+          project: 'Workflow Templates'
+          column: ${{ github.event_name == 'issues' && github.event.action == 'opened' && 'To do' || github.event.action == 'closed' && 'Done' || 'In progress' }}
+          repo-token: ${{ secrets.GH_PROJECT_TOKEN }}
