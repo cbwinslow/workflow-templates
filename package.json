@@ -1,0 +1,29 @@
+{
+  "name": "workflow-templates",
+  "version": "1.0.0",
+  "description": "Development workflow templates and configurations",
+  "scripts": {
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/workflow-templates.git"
+  },
+  "keywords": [
+    "workflow",
+    "templates",
+    "development"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yourusername/workflow-templates/issues"
+  },
+  "homepage": "https://github.com/yourusername/workflow-templates#readme",
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^2.8.0"
+  }
+}
