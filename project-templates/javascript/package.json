@@ -1,0 +1,14 @@
+{
+  "name": "project-name",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint .",
+    "start": "node src/index.js"
+  },
+  "devDependencies": {
+    "jest": "^29.0.0",
+    "eslint": "^8.0.0",
+    "eslint-config-airbnb-base": "^15.0.0"
+  }
+}

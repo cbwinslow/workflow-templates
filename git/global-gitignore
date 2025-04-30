@@ -1,0 +1,15 @@
+# Global .gitignore
+.DS_Store
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+node_modules/
+.idea/
+.vscode/
+*.log
+.pytest_cache/
+coverage/
+dist/
+build/

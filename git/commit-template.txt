@@ -1,0 +1,10 @@
+# <type>: <subject>
+
+# Types: feat, fix, docs, style, refactor, test, chore
+# Example: feat: add user authentication system
+#
+# Body - explain the what and why (not the how):
+#
+# Breaking changes (if any):
+#
+# Closes #issue-number (if applicable)
