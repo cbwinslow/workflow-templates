@@ -1,0 +1,15 @@
+# Core dependencies
+PyYAML==6.0.1
+requests==2.31.0
+
+# Trello integration
+py-trello==0.19.0
+
+# GitHub integration
+PyGithub==2.1.1
+
+# Optional dependencies
+openai==1.0.0  # For potential AI-powered task parsing
+python-dateutil==2.9.0.post0  # Required by some platform clients
+GitPython==3.1.40  # For Git operations
+
