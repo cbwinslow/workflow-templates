@@ -1,0 +1,76 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "curio-curation"
+version = "0.1.0"
+description = "A tool for automating project curation and task management from business plans"
+readme = "README.md"
+authors = [
+    { name = "Project Templates Team", email = "team@project-templates.org" }
+]
+license = { file = "LICENSE" }
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+    "Topic :: Software Development :: Build Tools",
+]
+keywords = ["project", "initialization", "automation", "workflow", "templates"]
+dependencies = [
+    "PyYAML>=6.0.1",
+    "requests>=2.31.0",
+    "py-trello>=0.19.0",
+    "PyGithub>=2.1.1",
+    "openai>=1.0.0",
+    "python-dateutil>=2.9.0",
+    "GitPython>=3.1.40",
+]
+requires-python = ">=3.9"
+
+[project.urls]
+Homepage = "https://github.com/project-templates/workflow-templates"
+Documentation = "https://github.com/project-templates/workflow-templates/tree/main/project-initializer#readme"
+Repository = "https://github.com/project-templates/workflow-templates.git"
+Issues = "https://github.com/project-templates/workflow-templates/issues"
+
+[project.scripts]
+curio-curation = "curio_curation.src.project_initializer:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["curio_curation"]
+
+[tool.coverage.run]
+source = ["curio_curation"]
+branch = true
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "raise NotImplementedError",
+    "if __name__ == .__main__.:",
+    "pass",
+    "raise ImportError",
+]
+ignore_errors = true
+omit = [
+    "tests/*",
+    "setup.py",
+]
+
+[tool.flake8]
+max-line-length = 127
+exclude = [".git", "__pycache__", "build", "dist"]
+
