@@ -1,4 +1,4 @@
-# Project Initializer
+# Curio Curation
 
 This workflow template automates the process of converting a business plan or project prompt into actionable tasks across multiple platforms including Trello and Git-based services (GitHub, GitLab, Bitbucket).
 
@@ -21,7 +21,7 @@ This workflow template automates the process of converting a business plan or pr
 
 ## Installation
 
-1. Copy the `project-initializer` directory to your project
+1. Copy the `curio_curation` directory to your project
 2. Install required dependencies:
 
 ```bash
@@ -35,7 +35,7 @@ pip install openai requests gitpython py-trello pyyaml
 ### Command-Line Usage
 
 ```bash
-python project_initializer.py --input business_plan.md --config config.yml
+python -m curio_curation.src.project_initializer --input business_plan.md --config config.yml
 ```
 
 ### Options
@@ -91,7 +91,7 @@ See the sample configuration file for details.
 ### Example Command
 
 ```bash
-python project_initializer.py --input ecommerce_plan.md --config config.yml --create-trello --platform github --create-issues
+python -m curio_curation.src.project_initializer --input ecommerce_plan.md --config config.yml --create-trello --platform github --create-issues
 ```
 
 ## License

@@ -1,0 +1,140 @@
+# Project Initializer Configuration
+# This file contains settings for the project-initializer tool
+
+# API credentials for various services
+credentials:
+  # Trello API credentials
+  trello:
+    api_key: "your-trello-api-key"
+    token: "your-trello-token"
+    
+  # OpenAI API for advanced task parsing
+  openai:
+    api_key: "your-openai-api-key"
+    
+  # GitHub API token
+  github:
+    token: "your-github-token"
+    
+  # GitLab API token
+  gitlab:
+    token: "your-gitlab-token"
+    
+  # Bitbucket API credentials
+  bitbucket:
+    username: "your-bitbucket-username"
+    app_password: "your-bitbucket-app-password"
+
+# Project-specific settings
+project_settings:
+  name: "My New Project"
+  description: "Project description goes here"
+  repo_path: "./your-local-repo-path"  # Leave empty to use current directory
+  default_platform: "github"  # github, gitlab, or bitbucket
+  
+  # Project board settings
+  board:
+    name: "Project Development"
+    description: "Development tasks for the project"
+    
+  # Template settings
+  templates:
+    issue_template: true
+    pr_template: true
+    readme: true
+    contribution_guidelines: true
+
+# Task categorization
+task_categories:
+  "Frontend":
+    color: "yellow"
+    initial_status: "Backlog"
+    
+  "Backend":
+    color: "green"
+    initial_status: "Backlog"
+    
+  "DevOps":
+    color: "orange"
+    initial_status: "Backlog"
+    
+  "Documentation":
+    color: "blue"
+    initial_status: "Backlog"
+    
+  "Testing":
+    color: "red"
+    initial_status: "Backlog"
+    
+  "Design":
+    color: "purple"
+    initial_status: "Backlog"
+    
+  "Research":
+    color: "sky"
+    initial_status: "Backlog"
+
+# Git platform specific configurations
+git_platforms:
+  github:
+    owner: "your-github-username"
+    repo: "your-repo-name"
+    api_url: "https://api.github.com"
+    create_issues: true
+    create_milestones: true
+    labels:
+      - name: "bug"
+        color: "d73a4a"
+        description: "Something isn't working"
+      - name: "enhancement"
+        color: "a2eeef"
+        description: "New feature or request"
+      - name: "documentation"
+        color: "0075ca"
+        description: "Documentation updates"
+  
+  gitlab:
+    owner: "your-gitlab-username"
+    repo: "your-repo-name"
+    api_url: "https://gitlab.com/api/v4"
+    create_issues: true
+    create_milestones: true
+    
+  bitbucket:
+    owner: "your-bitbucket-workspace"
+    repo: "your-repo-name"
+    api_url: "https://api.bitbucket.org/2.0"
+    create_issues: true
+    create_milestones: false  # Bitbucket doesn't have native milestones
+
+# Task template settings
+task_templates:
+  issue_body: |
+    ## Description
+    {description}
+    
+    ## Acceptance Criteria
+    - [ ] Criteria 1
+    - [ ] Criteria 2
+    
+    ## Additional Information
+    **Category:** {category}
+    **Difficulty:** {difficulty}
+    **Estimated Time:** {estimated_hours} hours
+    **Trello Card:** {trello_link}
+    
+  pr_body: |
+    ## Description
+    {description}
+    
+    ## Changes
+    - Change 1
+    - Change 2
+    
+    ## Testing
+    - [ ] Tests added/updated
+    - [ ] Documentation updated
+    
+    ## Related Issues
+    Closes #{issue_number}
+
